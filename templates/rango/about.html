@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>About us</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>About us</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" /> 
     <body>
-                
-                <h1>Rango says... <br>here is the about page.</h1>
-
-                <h2>
-                    This tutorial has been put together by {{ name }}
-                </h2>
-                
-                <div>
-                    <strong>Here's a link back to the</strong>
-                    <a href="/">Home</a><br/>
-                </div>
-                <div>
-                    <img src="{% static 'images/rango.png' %}" alt="Picture of Rango" draggable="false">
-                    <img src="/media/kitty.jpg" alt="Picture of Rango" draggable="false">
-                </div>
-            
-            </body>
-            </html>
+        <h1>Rango says...</h1>
+        <div>
+          here is the about page. <br />
+    
+          <strong>This tutorial has been put together by {{ name }}</strong>
+        </div>
+        <div>
+          <a href="/rango/">Home</a><br />
+          <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
+          <img src="/media/cat.jpg" alt="Picture of a Cat" />
+        </div>
+      </body>
+    </html>
