@@ -8,35 +8,29 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
-        <style>
-            li {
-                display: inline;
-              }
-
-              li a {
-                display: block;
-                display: inline;
-                color: Black;
-                padding: 14px 16px;
-                text-decoration: none;
-              }
-        </style>
     </head>
     <body>
-        <header>
-            <ul>
-                <li><a href="">Homepage</a></li>
-                <li><a href="/rango/about/">About us</a></li>
-
-            </ul>
-                
-            </header>
         <h1>
             Rango Says...
         </h1>
         <div>
              Hey there partner!
             <strong>{{ boldmessage }}</strong><br/>
+        </div>
+        <div>
+            {% if categories %}
+            <ul>
+                {% for category in categories %}
+                <li>
+                    {{category.name}}
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <strong>
+                There are no categories present.
+            </strong>
+            {% endif %}
         </div>
         <div>
             <a href="/rango/about/">About</a><br />
